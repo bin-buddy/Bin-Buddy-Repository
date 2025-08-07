@@ -1,3 +1,4 @@
+import os
 import random
 from flask import Flask, request, jsonify
 from geopy.distance import geodesic
