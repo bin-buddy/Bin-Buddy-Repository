@@ -85,4 +85,6 @@ def get_route(worker):
     return jsonify(subset_sorted)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    # Bind to 0.0.0.0 so Render can see it
+    app.run(host="0.0.0.0", port=port, debug=True)
